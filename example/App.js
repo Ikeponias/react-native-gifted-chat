@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 
-import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
+import {GiftedChat, Actions, Bubble, SystemMessage} from './src/GiftedChat.js'
 import CustomActions from './CustomActions';
 import CustomView from './CustomView';
 
@@ -214,11 +214,6 @@ export default class Example extends React.Component {
           _id: 1, // sent messages should have same user._id
         }}
 
-        renderActions={this.renderCustomActions}
-        renderBubble={this.renderBubble}
-        renderSystemMessage={this.renderSystemMessage}
-        renderCustomView={this.renderCustomView}
-        renderFooter={this.renderFooter}
       />
     );
   }
