@@ -339,7 +339,9 @@ class GiftedChat extends React.Component {
   }
 
   onSend(messages = [], shouldResetInputToolbar = false) {
-    messages = [{ text: this.textInput._lastNativeText }];
+    if (!Array.isArray(messages)) {
+      messages = [messages];
+    }
     console.log(messages)
     messages = messages.map(message => {
       return {
